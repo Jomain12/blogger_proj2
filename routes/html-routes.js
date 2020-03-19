@@ -9,23 +9,75 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/members");
+      res.redirect("/");
     }
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
+    res.sendFile(path.join(__dirname, "../public/bloggerhome.html"));
   });
 
   app.get("/login", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/members");
+      res.redirect("/");
     }
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
+  
+  app.get("/blogs", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/");
+    }
+    res.sendFile(path.join(__dirname, "../public/blogs.html"));
+  });
+
+  app.get("/myprofile", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/");
+    }
+    res.sendFile(path.join(__dirname, "../public/myprofile.html"));
+  });
+
+  app.get("/discover", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/");
+    }
+    res.sendFile(path.join(__dirname, "../public/discover.html"));
+  });
+
+  app.get("/heatmap", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/");
+    }
+    res.sendFile(path.join(__dirname, "../public/heatmap.html"));
+  });
+  app.get("/signup", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/");
+    }
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
+  });
+ 
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
-  app.get("/members", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
-  });
+  // app.get("/blogs", isAuthenticated, function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/blogs.html"));
+  // });
+
+  // app.get("/myprofile", isAuthenticated, function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/myprofile.html"));
+  // });
+
+  // app.get("/discover", isAuthenticated, function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/discover.html"));
+  // });
+
+  // app.get("/signup", isAuthenticated, function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/signup.html"));
+  // });
 
 };
