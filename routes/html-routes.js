@@ -9,56 +9,58 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/");
+      res.render("bloggerhome");
     }
-    res.sendFile(path.join(__dirname, "../public/bloggerhome.html"));
+    res.render("bloggerhome");
   });
 
   app.get("/login", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/");
+      res.render("login");
     }
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+    res.render("login");
   });
   
   app.get("/blogs", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/");
+      res.render("blogs");
     }
-    res.sendFile(path.join(__dirname, "../public/blogs.html"));
+    res.render("blogs");
   });
 
   app.get("/myprofile", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/");
+      res.render("myprofile");
     }
-    res.sendFile(path.join(__dirname, "../public/myprofile.html"));
+    res.render("myprofile");
   });
 
   app.get("/discover", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/");
+      res.render("discover");
     }
-    res.sendFile(path.join(__dirname, "../public/discover.html"));
+    res.render("discover");
   });
 
   app.get("/heatmap", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/");
+      res.render("heatmap");
     }
-    res.sendFile(path.join(__dirname, "../public/heatmap.html"));
+    res.render("heatmap");
   });
-  app.get("/signup", function(req, res) {
+  
+  
+  app.get("/bulma", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect("/");
     }
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
+    res.sendFile(path.join(__dirname, "../public/bulma.html"));
   });
  
 

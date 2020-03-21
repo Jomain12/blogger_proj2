@@ -1,0 +1,16 @@
+.container {
+    width: 800px;
+    margin: 30 px auto;
+}
+.custom1 {
+    background-color: #a6c96a !important;
+}
+.custom2 {
+    background-color: #5cb85c !important;
+}
+.custom3 {
+    background-color: #009e47 !important;
+}
+.custom4 {
+    background-color: #00753a !important;
+}
