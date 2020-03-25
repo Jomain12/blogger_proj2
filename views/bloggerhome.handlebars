@@ -1,3 +1,4 @@
+<script src="/js/bloggerhome.js"></script>
 <!-- START NAV -->
     <nav class="navbar">
         <div class="container">
@@ -13,30 +14,30 @@
             </div>
             <div id="navbarMenu" class="navbar-menu">
                 <div class="navbar-end">
-                    <a class="navbar-item is-active">
-                            Home
-                        </a>
-                    <a class="navbar-item">
+                    <a id="navbar-item-blogs">
                             Blogs
                         </a>
-                    <a class="navbar-item">
+                    <a id="navbar-item-discover">
                             Discover
                         </a>
-                    <a class="navbar-item">
+                    <a id="navbar-item-help">
                             Help
                         </a>
+                    <a id="navbar-item-help-create">
+                            Post
+                        </a>
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
+                        <a id="navbar-link">
                                 Account
                             </a>
                         <div class="navbar-dropdown">
-                            <a class="navbar-item">
+                            <a id="navbar-item-profile">
                                     Profile
                                 </a>
-                            <a class="navbar-item">
+                            <a id="navbar-item-settings">
                                     Settings
                                 </a>
-                            <a class="navbar-item">
+                            <a class="navbar-item-logout">
                                     Logout
                                 </a>
                         </div>
@@ -47,29 +48,7 @@
     </nav>
     <!-- END NAV -->
 
-    <section class="hero is-info is-medium is-bold">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>sed eiusmod tempor incididunt ut labore et dolore magna aliqua</h1>
-            </div>
-        </div>
-    </section>
 
-
-                            <a class="navbar-item">
-                                    Settings
-                                </a>
-                            <hr class="navbar-divider">
-                            <div class="navbar-item">
-                                Login
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!-- END NAV -->
 
     <section class="hero is-info is-medium is-bold">
         <div class="hero-body">
@@ -123,14 +102,4 @@
         </section>
         <!-- END ARTICLE FEED -->
         </div>
-        {{!-- <script async type="text/javascript" src="../js/bulma.js"></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/js/OverlayScrollbars.min.js'></script>  
-        <script>
-        document.addEventListener("DOMContentLoaded", function() {
-        //The first argument are the elements to which the plugin shall be initialized
-        //The second argument has to be at least a empty object or a object with your desired options
-        OverlayScrollbars(document.querySelectorAll("body"), { });
-        });
-        </script>         --}}
-                <!-- START ARTICLE -->
-      
+        
