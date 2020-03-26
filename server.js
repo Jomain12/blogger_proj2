@@ -29,17 +29,20 @@ app.use(passport.session());
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-app.get('/', (req, res) => {
-  res.render('bloggerhome')
-})
-
-app.get('/blogs', (req, res) => {
-  res.render('blogs')
-})
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', '*');
+  if (req.method === 'OPTIONS') {
+    res.header('Access-Control-Allow-Methods', 'get, post, update, delete');
+    return res.status(200).json({});
+  }
+  next();
+});
 
 // Requiring our routes
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
+// require("./routes/blog-routes.js")(app);
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function() {

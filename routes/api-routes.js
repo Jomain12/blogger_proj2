@@ -50,4 +50,20 @@ module.exports = function(app) {
       });
     }
   });
+
+  app.post("/api/createBlog", function(req, res) {
+    db.Blog.create({
+      name: req.body.name,
+      category: req.body.category,
+      content: req.body.content
+    })
+      .then(function() {
+        res.redirect(307, "/blogs");
+      })
+      .catch(function(err) {
+        res.status(401).json(err);
+      });
+  });
 };
+
+
