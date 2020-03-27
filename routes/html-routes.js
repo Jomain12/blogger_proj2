@@ -1,8 +1,6 @@
 // Requiring path to so we can use relative routes to our HTML files
 var path = require("path");
 
-var blogRoutes = require('./blog-routes')
-
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
@@ -24,12 +22,12 @@ module.exports = function(app) {
     res.render("login");
   });
   
-  app.get("/blogs", function(req, res) {
+  app.get("/getblogs", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.render("blogs");
+      res.render("getblogs");
     }
-    res.render("blogs");
+    res.render("getblogs");
   });
 
   app.get("/myprofile", function(req, res) {
@@ -72,6 +70,8 @@ module.exports = function(app) {
     }
     res.render("createblog");
   });
+
+  
 
   //  app.use("/bloggers", blogRoutes);
 

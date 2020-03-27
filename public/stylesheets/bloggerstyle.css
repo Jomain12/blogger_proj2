@@ -42,6 +42,11 @@ h1, h2, h3, h2, p {
 #menu ul li a {
     display: inline-block; color: #fff; padding: 15px;
 }
+
+#searchbar {
+  width: 150px;
+  height: 150px;
+}
             
 #menu ul li a:hover {
     background-color: #055;

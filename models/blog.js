@@ -1,9 +1,7 @@
-var Sequelize = require('sequelize');
-// var db = require('../config/middleware');
-
 //Creating our User model
 module.exports = function(sequelize, DataTypes) {
-  var Blog = sequelize.define("blogs", {
+  console.log("IMPLEMENTING BLOG MODEL")
+  var Blog = sequelize.define("Blogs", {
     // The name cannot be null, and must be a proper name before creation
     name: {
       type: DataTypes.STRING,
@@ -22,10 +20,7 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
     }
   });
+  
 
   return Blog;
 };
-
-
-
-  

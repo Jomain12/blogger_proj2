@@ -16,7 +16,6 @@ var deleteBlog = document.getElementById("navbar-item-blogs");
     }
 </script> */}
 
-
 blogs.addEventListener("click", function() {
     window.location.pathname = '../views/blogs'
 });

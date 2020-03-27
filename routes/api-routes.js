@@ -13,6 +13,7 @@ module.exports = function(app) {
       id: req.user.id
     });
   });
+  
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
@@ -52,18 +53,28 @@ module.exports = function(app) {
   });
 
   app.post("/api/createBlog", function(req, res) {
-    db.Blog.create({
+    db.Blogs.create({
       name: req.body.name,
       category: req.body.category,
       content: req.body.content
     })
       .then(function() {
-        res.redirect(307, "/blogs");
+        res.redirect(201);
       })
       .catch(function(err) {
-        res.status(401).json(err);
+        res.status(500).json(err);
       });
   });
+
+  app.get("/api/getblog", function(req, res) {
+    if (!req.user) {
+      // The user is not logged in, send back an empty object
+      res.json({});
+    } else {
+      // Otherwise send back the user's email and id
+      // Sending back a password, even a hashed password, isn't a good idea
+      res.json({
+        name: req.user.name      });
+    }
+  });
 };
-
-
