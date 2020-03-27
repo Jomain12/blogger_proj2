@@ -22,12 +22,12 @@ module.exports = function(app) {
     res.render("login");
   });
   
-  app.get("/blogs", function(req, res) {
+  app.get("/getblogs", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.render("blogs");
+      res.render("getblogs");
     }
-    res.render("blogs");
+    res.render("getblogs");
   });
 
   app.get("/myprofile", function(req, res) {
@@ -62,6 +62,20 @@ module.exports = function(app) {
     }
     res.sendFile(path.join(__dirname, "../public/bulma.html"));
   });
+
+  app.get("/createblog", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.render("createblog");
+    }
+    res.render("createblog");
+  });
+
+  
+
+  //  app.use("/bloggers", blogRoutes);
+
+ 
  
 
   // Here we've add our isAuthenticated middleware to this route.

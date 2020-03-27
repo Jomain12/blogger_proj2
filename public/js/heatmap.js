@@ -1,3 +1,20 @@
+$(document).ready(function(){
+    
+var cal = new CalHeatMap();
+cal.init({
+start: new Date(2000, 0), // January, 1st 2000
+range: 12,
+domain: "year",
+subDomain: "month",
+data: "http://localhost/api?start={{d:start}}&stop={{d:end}}"
+});
+
+var data = [{count: 2, date: "2017-09-23"}];
+
+var options = {months: 12};
+
+$("#heatmap-1").CalendarHeatmap( data , options );
+
 function randomDate(start, end) {
     var date = new Date(+start + Math.random() * (end - start));
     return moment(date).format('YYYY-MM-DD');
@@ -60,11 +77,4 @@ $("#heatmap-4").CalendarHeatmap( data, {
 $("#heatmap-5").CalendarHeatmap( [], {
     title: "No Data"
 });
-var cal = new CalHeatMap();
-cal.init({
-start: new Date(2000, 0), // January, 1st 2000
-range: 12,
-domain: "year",
-subDomain: "month",
-data: "http://localhost/api?start={{d:start}}&stop={{d:end}}"
 });

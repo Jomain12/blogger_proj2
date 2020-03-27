@@ -14,16 +14,16 @@
             </div>
             <div id="navbarMenu" class="navbar-menu">
                 <div class="navbar-end">
-                    <a id="navbar-item-blogs">
+                    <a href="http://localhost:8080/blogs" id="navbar-item-blogs">
                             Blogs
                         </a>
-                    <a id="navbar-item-discover">
+                    <a href="http://localhost:8080/discover" id="navbar-item-discover">
                             Discover
                         </a>
-                    <a id="navbar-item-help">
-                            Help
+                    <a href="http://localhost:8080/getblogs" id="navbar-item-help">
+                            View Blogs
                         </a>
-                    <a id="navbar-item-help-create">
+                    <a href="http://localhost:8080/create" id="navbar-item-help-create">
                             Post
                         </a>
                     <div class="navbar-item has-dropdown is-hoverable">
@@ -31,7 +31,7 @@
                                 Account
                             </a>
                         <div class="navbar-dropdown">
-                            <a id="navbar-item-profile">
+                            <a href="http://localhost:8080/myprofile" id="navbar-item-profile">
                                     Profile
                                 </a>
                             <a id="navbar-item-settings">
@@ -46,53 +46,17 @@
             </div>
         </div>
     </nav>
-    <!-- END NAV -->
+    
 
-
-
-    <section class="hero is-info is-medium is-bold">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>sed eiusmod tempor incididunt ut labore et dolore magna aliqua</h1>
-            </div>
-        </div>
-    </section>
-
-
-    <div class="container">
-        <!-- START ARTICLE FEED -->
-        <section class="articles">
-            <div class="column is-8 is-offset-2">
-                <!-- START ARTICLE -->
-                <div class="card article">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-content has-text-centered">
-                                <p class="title article-title">Introducing a new feature for paid subscribers</p>
-                                <div class="tags has-addons level-item">
-                                    <span class="tag is-rounded is-info">@skeetskeet</span>
-                                    <span class="tag is-rounded">May 10, 2018</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content article-body">
-                            <p>Non arcu risus quis varius quam quisque. Dictum varius duis at consectetur lorem. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. </p>
-                            <p>Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. In hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Accumsan lacus vel facilisis volutpat. Non sodales neque sodales ut etiam.
-                                Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus.</p>
-                            <h3 class="has-text-centered">How to properly center tags in bulma?</h3>
-                            <p> Proper centering of tags in bulma is done with class: <pre>level-item</pre>
-                                Voluptat ut farmacium tellus in metus vulputate. Feugiat in fermentum posuere urna nec. Pharetra convallis posuere morbi leo urna molestie.
-                                Accumsan lacus vel facilisis volutpat est velit egestas. Fermentum leo vel orci porta. Faucibus interdum posuere lorem ipsum.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- END ARTICLE -->
+    
+        <section style="position:absolute; left:0;" class="articles">
+            <div class="column is-8">
                 <!-- START ARTICLE -->
                 <div class="card article">
                     <div class="card-content">
                         <div class="media">
                             <div class="media-center">
-                                <img src="http://www.radfaces.com/images/avatars/daria-morgendorffer.jpg" class="author-image" alt="Placeholder image">
+                                <img class="daria" src="http://www.radfaces.com/images/avatars/daria-morgendorffer.jpg" class="author-image" alt="Placeholder image">
                             </div>
                         </div>
                     </div>
@@ -102,4 +66,30 @@
         </section>
         <!-- END ARTICLE FEED -->
         </div>
-        
+    
+                <div class="tile is-ancestor">
+        <div class="tile is-8 is-vertical">
+            <div class="tile">
+            <!-- Top tile -->
+            </div>
+        </div>
+        <div class="tile">
+            
+            <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+1914 translation by H. Rackham
+"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+            </p>
+            <!-- This tile will take up the whole vertical space -->
+        </div>
+        </div>
+    </div>
+
+        <footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    </p>
+  </div>
+</footer>
