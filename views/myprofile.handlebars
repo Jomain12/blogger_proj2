@@ -17,7 +17,7 @@
         <a href="http://localhost:8080/getblogs" class="navbar-item">
             View Blogs
         </a>
-        <a href="http://localhost:8080/create" class="navbar-item">
+        <a href="http://localhost:8080/createblog" class="navbar-item">
             Create Blog
         </a>
         <div class="navbar-item has-dropdown is-hoverable">
@@ -41,10 +41,10 @@
         <div class="navbar-end">
         <div class="navbar-item">
             <div class="buttons">
-            <a href="http://localhost:8000/signup" class="button is-primary">
+            <a href="http://localhost:8080/signup" class="button is-primary">
                 <strong>Sign up</strong>
             </a>
-            <a href="http://localhost:8000/login" class="button is-light">
+            <a href="http://localhost:8080/login" class="button is-light">
                 Log out
             </a>
             </div>
@@ -54,13 +54,20 @@
     </nav>
 
 
-    <section class="hero is-info is-medium is-bold">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>sed eiusmod tempor incididunt ut labore et dolore magna aliqua</h1>
-            </div>
-        </div>
-    </section>
+    <div class="columns the-header is-marginless">
+  <div class="column header-text is-6 is-offset-3 is-12-mobile">
+    <p class="subtitle has-text-black has-text-centered">
+      Hello {{{user}}}!
+    </p>
+    <img class="header-background" src="https://unsplash.it/1000/1000/?random&pic=1" id="header-background-id" alt="background-img">
+  </div>
+</div>
+
+<!-- header ends -->
+<!-- test -->
+<div class="column is-12 has-text-centered">
+  <img class="profile-picture" src="https://unsplash.it/300/300/?random&pic=1(14 kB)" alt="profile-picture">
+</div>
 
 
     <div class="container">
@@ -69,43 +76,20 @@
             <div class="column is-8 is-offset-2">
                 <!-- START ARTICLE -->
                 <div class="card article">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-content has-text-centered">
-                                <p class="title article-title">Introducing a new feature for paid subscribers</p>
-                                <div class="tags has-addons level-item">
-                                    <span class="tag is-rounded is-info">@skeetskeet</span>
-                                    <span class="tag is-rounded">May 10, 2018</span>
-                                </div>
-                            </div>
+                    <h2>Bio:<h2>
+                        <div class="control">
+  <textarea class="textarea is-hovered" placeholder="Insert Bio"></textarea>
                         </div>
-                        <div class="content article-body">
-                            <p>Non arcu risus quis varius quam quisque. Dictum varius duis at consectetur lorem. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. </p>
-                            <p>Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. In hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Accumsan lacus vel facilisis volutpat. Non sodales neque sodales ut etiam.
-                                Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus.</p>
-                            <h3 class="has-text-centered">How to properly center tags in bulma?</h3>
-                            <p> Proper centering of tags in bulma is done with class: <pre>level-item</pre>
-                                Voluptat ut farmacium tellus in metus vulputate. Feugiat in fermentum posuere urna nec. Pharetra convallis posuere morbi leo urna molestie.
-                                Accumsan lacus vel facilisis volutpat est velit egestas. Fermentum leo vel orci porta. Faucibus interdum posuere lorem ipsum.</p>
-                        </div>
-                    </div>
                 </div>
-                <!-- END ARTICLE -->
-                <!-- START ARTICLE -->
-                <div class="card article">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-center">
-                                <img src="http://www.radfaces.com/images/avatars/daria-morgendorffer.jpg" class="author-image" alt="Placeholder image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              </div>
-
+            </div>
         </section>
-        <!-- END ARTICLE FEED -->
-        </div>
+    </div>
+        
+        <h1>Blogs Posted:{{{blogs}}}</h2>
+
+        
+        
+        
         {{!-- <script async type="text/javascript" src="../js/bulma.js"></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/js/OverlayScrollbars.min.js'></script>  
         <script>
