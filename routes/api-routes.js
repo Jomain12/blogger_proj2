@@ -66,15 +66,29 @@ module.exports = function(app) {
       });
   });
 
-  app.get("/api/getblog", function(req, res) {
-    if (!req.user) {
-      // The user is not logged in, send back an empty object
-      res.json({});
-    } else {
-      // Otherwise send back the user's email and id
-      // Sending back a password, even a hashed password, isn't a good idea
-      res.json({
-        name: req.user.name      });
-    }
+  app.get("/api/getblogs",(req, res) => {
+    // if (!req.user) {
+    //   // The user is not logged in, send back an empty object
+    //   res.json({});
+    // } else {
+    //   // Otherwise send back the user's email and id
+    //   // Sending back a password, even a hashed password, isn't a good idea
+    //   res.json({
+    //     name: req.Blogs.name, 
+    //     category: req.Blogs.category, 
+    //     content: req.Blogs.content,
+    //   });
+      db.Blogs.findAll().then(function(Blogs) {
+        res.json(Blogs)
+        // project will be the first entry of the Projects table with the title 'aProject' || null
+      console.log(Blogs)
+      return Blogs
+      })
   });
+  
+  // app.get('/api/getblogs', (req, res) => {
+  //   db.blogs.findAll().then(users => res.json(users))
+  //   console.log(db.Blogs)
+  // })
+
 };
