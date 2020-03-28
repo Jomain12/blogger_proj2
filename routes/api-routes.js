@@ -34,7 +34,7 @@ module.exports = function(app) {
   // Route for logging user out
   app.get("/logout", function(req, res) {
     req.logout();
-    res.redirect("/");
+    res.redirect("/login");
   });
 
   // Route for getting some data about our user to be used client side
@@ -78,7 +78,7 @@ module.exports = function(app) {
     //     category: req.Blogs.category, 
     //     content: req.Blogs.content,
     //   });
-      db.Blogs.findAll().then(function(Blogs) {
+      db.Blogs.findAll({}).then(function(Blogs) {
         res.json(Blogs)
         // project will be the first entry of the Projects table with the title 'aProject' || null
       console.log(Blogs)

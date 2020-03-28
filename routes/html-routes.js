@@ -25,9 +25,9 @@ module.exports = function(app) {
   app.get("/getblogs", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.render("getblogs");
+      res.render("getblogs2");
     }
-    res.render("getblogs");
+    res.render("getblogs2");
   });
 
   app.get("/myprofile", function(req, res) {
@@ -54,6 +54,13 @@ module.exports = function(app) {
     res.render("heatmap");
   });
   
+  app.get("/signup", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.render("signup");
+    }
+    res.render("signup");
+  });
   
   app.get("/bulma", function(req, res) {
     // If the user already has an account send them to the members page

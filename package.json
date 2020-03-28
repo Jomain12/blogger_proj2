@@ -32,6 +32,7 @@
     "jquery": "^3.4.1",
     "jquery-calendar-heatmap": "^1.1.0",
     "moment": "^2.24.0",
+    "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
     "nodemon": "^2.0.2",
     "passport": "^0.4.1",
