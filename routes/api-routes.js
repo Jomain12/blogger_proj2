@@ -81,8 +81,8 @@ module.exports = function(app) {
       db.Blogs.findAll({}).then(function(Blogs) {
         res.json(Blogs)
         // project will be the first entry of the Projects table with the title 'aProject' || null
-      console.log(Blogs)
-      return Blogs
+      // console.log(Blogs)
+      
       })
   });
   

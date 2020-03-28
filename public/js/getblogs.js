@@ -3,7 +3,7 @@ $(document).ready(function() {
     // Getting references to our form and inputs
     var getBlogForm = $("form.getBlog");
     // var nameInput = $("input#blog-name");
-    var blogResultbox = $("textarea#searched-blog");
+    var blogResultbox = $("div#searched-blog");
 
     console.log(getBlogForm)
 
@@ -35,21 +35,23 @@ $(document).ready(function() {
   
     // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
     function findblogs(name) {
+      var jsonresponse
       console.log("GETBLOG CALLED")
       $.get("/api/getblogs", {
         name: name,
       })
-        .then(function() {
-          console.log("SUCCESS!")
+        .then(function(resp) {
+          console.log(resp)
           // window.location.replace("/bloggerhome");
           // If there's an error, log the error
+          blogResultbox.text(jsonresponse),
+          jsonresponse = JSON.stringify(resp)
         })
         .catch(function(err) {
           console.log(err);
         });
-        blogResultbox.text()
         
-        return 
+        
     }
   })
 })
