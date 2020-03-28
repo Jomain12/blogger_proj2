@@ -8,6 +8,8 @@ var createBlog = document.getElementById("navbar-item-blogs");
 var updateBlog = document.getElementById("navbar-item-blogs");
 var deleteBlog = document.getElementById("navbar-item-blogs");
 
+
+
 {/* <button id="navbar-item-blogs" class="float-left submit-button" > blog </button> */}
 
 {/* <script type="text/javascript">
