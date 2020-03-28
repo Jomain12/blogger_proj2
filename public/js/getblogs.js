@@ -35,7 +35,6 @@ $(document).ready(function() {
   
     // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
     function findblogs(name) {
-      var jsonresponse
       console.log("GETBLOG CALLED")
       $.get("/api/getblogs", {
         name: name,
@@ -44,8 +43,7 @@ $(document).ready(function() {
           console.log(resp)
           // window.location.replace("/bloggerhome");
           // If there's an error, log the error
-          blogResultbox.text(jsonresponse),
-          jsonresponse = JSON.stringify(resp)
+          blogResultbox.text(resp).toString(resp);
         })
         .catch(function(err) {
           console.log(err);
