@@ -1,0 +1,98 @@
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+        <a href="https://blogger1221.herokuapp.com/" class="navbar-item">
+            Home
+        </a>
+        <a href="https://blogger1221.herokuapp.com/getblogs" class="navbar-item">
+            View Blogs
+        </a>
+        <a href="https://blogger1221.herokuapp.com/createblog" class="navbar-item">
+            Create Blog
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+            More
+            </a>
+            <div class="navbar-dropdown">
+            <a class="navbar-item">
+                Settings
+            </a>
+            <a class="navbar-item">
+                Contact
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+                Report an issue
+            </a>
+            </div>
+        </div>
+        </div>
+        <div class="navbar-end">
+        <div class="navbar-item">
+            <div class="buttons">
+            </a>
+            <a href="https://blogger1221.herokuapp.com/signin" class="button is-light">
+                Log out
+            </a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </nav>
+
+
+    <div class="columns the-header is-marginless">
+  <div class="column header-text is-6 is-offset-3 is-12-mobile">
+    <p class="subtitle has-text-black has-text-centered">
+      Hello {{{user}}}!
+    </p>
+    <img class="header-background" src="https://unsplash.it/1000/1000/?random&pic=1" id="header-background-id" alt="background-img">
+  </div>
+</div>
+
+<!-- header ends -->
+<!-- test -->
+<div class="column is-12 has-text-centered">
+  <img class="profile-picture" src="https://unsplash.it/300/300/?random&pic=1(14 kB)" alt="profile-picture">
+</div>
+
+
+    <div class="container">
+        <!-- START ARTICLE FEED -->
+        <section class="articles">
+            <div class="column is-8 is-offset-2">
+                <!-- START ARTICLE -->
+                <div class="card article">
+                    <h2>Bio:<h2>
+                        <div class="control">
+  <textarea class="textarea is-hovered" placeholder="Insert Bio"></textarea>
+                        </div>
+                </div>
+            </div>
+        </section>
+    </div>
+        
+        <h1>Blogs Posted:{{{blogs}}}</h2>
+
+        
+        
+        
+        {{!-- <script async type="text/javascript" src="../js/bulma.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/js/OverlayScrollbars.min.js'></script>  
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        //The first argument are the elements to which the plugin shall be initialized
+        //The second argument has to be at least a empty object or a object with your desired options
+        OverlayScrollbars(document.querySelectorAll("body"), { });
+        });
+        </script>         --}}
+                <!-- START ARTICLE -->
+      
